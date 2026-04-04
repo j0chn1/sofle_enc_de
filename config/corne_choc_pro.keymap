@@ -13,6 +13,7 @@
 #define RU      1
 #define LOWER   2
 #define RAISE   3
+#define CONFIG  4
 /* Use LALT on macOS for Ctrl+Option+Space instead of Ctrl+Meta+Space. */
 #define LANG_SWITCH_MOD LGUI
 
@@ -44,6 +45,15 @@
             key-positions = <20 21>;
             layers = <EN RU>;
             bindings = <&lang_toggle>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        config_layer_hold {
+            if-layers = <LOWER RAISE>;
+            then-layer = <CONFIG>;
         };
     };
 
@@ -88,10 +98,10 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&rgb_ug RGB_BRI  &trans  &kp N7  &kp N8    &kp N9  &studio_unlock  &kp LCTRL  &kp RCTRL  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT    &bt BT_SEL 4
-&rgb_ug RGB_TOG  &trans  &kp N4  &kp N5    &kp N6  &trans          &kp LALT   &kp RALT   &trans                &kp LEFT              &kp DOWN        &kp UP            &kp RIGHT     &bt BT_SEL 3
-&rgb_ug RGB_BRD  &trans  &kp N1  &kp N2    &kp N3  &kp N0                                &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &bt BT_CLR      &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2
-                                 &kp LGUI  &trans  &kp SPACE                             &kp LGUI              &trans                &kp SPACE
+&trans           &trans  &kp N7  &kp N8    &kp N9  &studio_unlock  &kp LCTRL  &kp RCTRL  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT    &trans
+&trans           &trans  &kp N4  &kp N5    &kp N6  &trans          &kp LALT   &kp RALT   &trans                &kp LEFT              &kp DOWN        &kp UP            &kp RIGHT     &trans
+&trans           &trans  &kp N1  &kp N2    &kp N3  &kp N0                                &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans          &trans            &trans        &trans
+                                  &kp LGUI  &trans  &kp SPACE                             &kp LGUI              &trans                &kp SPACE
             >;
         };
 
@@ -109,6 +119,17 @@
 &kp F1     &kp F2    &kp F3  &kp F4    &kp F5    &kp F6     &kp LALT   &kp RALT   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
 &kp F7     &kp F8    &kp F9  &kp F10   &kp F11   &kp F12                          &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                              &kp LGUI  &trans    &kp SPACE                        &kp RET    &trans     &kp RALT
+            >;
+        };
+
+        config_layer {
+            display-name = "CONFIG";
+
+            bindings = <
+&rgb_ug RGB_BRI  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 4
+&rgb_ug RGB_TOG  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 3
+&rgb_ug RGB_BRD  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2
+                             &trans  &trans  &trans                        &trans  &trans     &trans
             >;
         };
     };
