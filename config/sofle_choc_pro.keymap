@@ -80,10 +80,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp DE_GRAVE  &kp N1    &kp DE_N2  &kp DE_N3  &kp DE_N4  &kp DE_N5                          &kp DE_N6  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_N0    &kp DE_GRAVE
-&kp ESC       &kp DE_Q  &kp DE_W   &kp DE_E   &kp DE_R   &kp DE_T   &kp DE_Z                           &uumlaut   &kp DE_I   &oumlaut   &kp DE_P     &kp BSPC
-&kp TAB       &aumlaut  &kp DE_S   &kp DE_D   &kp DE_F   &kp DE_G   &kp DE_H                           &kp DE_J   &kp DE_K   &kp DE_L   &kp DE_SEMI  &kp DE_SQT
-&kp LSHFT     &kp DE_Y  &kp DE_X   &kp DE_C   &kp DE_V   &kp DE_B   &kp C_MUTE  &kp C_PLAY  &kp DE_N   &kp DE_M   &kp COMMA  &kp DOT    &kp DE_FSLH  &kp RSHFT
+&kp DE_GRAVE  &kp N1    &kp DE_N2  &kp DE_N3  &kp DE_N4  &kp DE_N5                          &kp DE_N6  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_N0     &kp DE_GRAVE
+&kp ESC       &kp DE_Q  &kp DE_W   &kp DE_E   &kp DE_R   &kp DE_T   &kp DE_Z                           &uumlaut   &kp DE_I   &oumlaut   &kp DE_P      &kp BSPC
+&kp TAB       &aumlaut  &kp DE_S   &kp DE_D   &kp DE_F   &kp DE_G   &kp DE_H                           &kp DE_J   &kp DE_K   &kp DE_L   &kp DE_SEMI   &kp DE_SQT
+&kp LSHFT     &kp DE_Y  &kp DE_X   &kp DE_C   &kp DE_V   &kp DE_B   &kp C_MUTE  &kp C_PLAY  &kp DE_N   &kp DE_M   &kp COMMA  &kp DOT    &dashgreater  &kp RSHFT
                         &kp LGUI   &kp LALT   &kp LCTRL  &mo LOWER  &kp RET     &kp SPACE   &mo RAISE  &kp RCTRL  &kp RALT   &kp RGUI
             >;
 
