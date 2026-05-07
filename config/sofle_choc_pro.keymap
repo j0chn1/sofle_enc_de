@@ -34,6 +34,8 @@
             label = "AUMLAUT";
             #binding-cells = <0>;
             bindings = <&kp DE_A>, <&kp DE_A_UMLAUT>;
+
+            tapping-term-ms = <150>;
         };
 
         oumlaut: oumlaut {
@@ -41,6 +43,8 @@
             label = "OUMLAUT";
             #binding-cells = <0>;
             bindings = <&kp DE_O>, <&kp DE_O_UMLAUT>;
+
+            tapping-term-ms = <150>;
         };
 
         uumlaut: uumlaut {
@@ -48,6 +52,17 @@
             label = "UUMLAUT";
             #binding-cells = <0>;
             bindings = <&kp DE_U>, <&kp DE_U_UMLAUT>;
+
+            tapping-term-ms = <150>;
+        };
+
+        dashgreater: dashgreater {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DASHGREATER";
+            #binding-cells = <0>;
+            bindings = <&kp DE_MINUS>, <&kp DE_LESS_THAN>;
+
+            tapping-term-ms = <150>;
         };
     };
 
